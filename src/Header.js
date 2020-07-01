@@ -20,7 +20,7 @@ function Header({tasks, addTask}) {
          />
     <button
       onClick={() => addTask(inputValue)}
-    > Add new</button>
+    > Add</button>
 </div>   
   )
 }
