@@ -1,0 +1,21 @@
+.fa {
+    color: #4043C9;
+    cursor: pointer;
+}
+
+.task_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    
+}
+
+p {
+    width: 150px;
+    font-size: 15px;
+    position: relative;
+    bottom: 15px;
+    font-weight: 550;
+    font-family: sans-serif;
+}
