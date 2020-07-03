@@ -1,24 +1,26 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import './Task.css'
 
-function Task({task, removeTask, changeCheckBox,checkBoxValue}) {
-
- 
+function Task({task, removeTask}) {
+  const [checkBoxValue, setCheckBoxValue] = useState(false)
+      
     return (
         <div className="task_container">
                 <input type="checkbox" 
-                  onChange={() => changeCheckBox()}
+                 onChange={() => setCheckBoxValue(!checkBoxValue)}
                 />
-                {
-                    checkBoxValue === false ?
-               <p contentEditable="true"
+               {
+                 checkBoxValue === true ?
+                 <p contentEditable="true"
                  className="through"
                 >{task.taskName}</p>
                 :
                 <p contentEditable="true"
                 >{task.taskName}</p>
-                }
+               }
+              
+                
                 
                 <i className="fa fa-trash" 
                    onClick= {() => removeTask(task.taskName)}

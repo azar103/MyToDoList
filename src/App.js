@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Header from './Header';
-import TasksList from './TasksList';
+import Header from './components/Header';
+import TasksList from './components/TasksList';
 
 
 function App() {
 
   const [tasks, setTasks] = useState([])
   const [inputValue, setInputValue] = useState('')
-  const [checkBoxValue, setCheckBoxValue] = useState(true)
+
   function addTask(dataValue) {
 
       setTasks([...tasks, {
@@ -29,10 +29,6 @@ function App() {
     setTasks(tasksRemoved)
   }
 
-  function changeCheckBox() {
-       setCheckBoxValue(!checkBoxValue)
-       console.log(checkBoxValue)
-  }
 
 
   return (
@@ -45,8 +41,7 @@ function App() {
        />
        <TasksList tasks={tasks}
           removeTask = {removeTask}
-          changeCheckBox = {changeCheckBox}
-          checkBoxValue={checkBoxValue}
+
        />
     </div>
   );

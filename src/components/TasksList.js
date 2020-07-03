@@ -3,15 +3,13 @@ import Task from './Task'
 
 
 
-function TasksList({tasks, removeTask, changeCheckBox, checkBoxValue}) {
+function TasksList({tasks, removeTask}) {
 
     return(
         tasks.map((task, index) => <Task
             key={index}
             task={task}
             removeTask = {removeTask}
-            changeCheckBox={changeCheckBox}
-            checkBoxValue={checkBoxValue}
            /> )
     )
 }
