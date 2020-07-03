@@ -3,23 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-const tasks = [
-  {
-       id: 0,
-       taskName: 'Swimming'
-  },
-  {
-      id: 1,
-      taskName: 'Studying'
-  },
-  {
-      id: 2,
-      taskName: 'Watchig Movie'
-  } 
-]
+
 ReactDOM.render(
   <React.StrictMode>
-    <App data={tasks}/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,11 +1,8 @@
 import React, {useState} from 'react'
 import './Header.css'
 
-function Header({tasks, addTask}) {
-  const [inputValue, setInpuValue] = useState('')
-  function changeInputValue(e) {
-        setInpuValue(e.target.value)
-  }
+function Header({tasks, addTask, onChange, inputValue}) {
+
  
   return(
     <div className="header-container">
@@ -16,7 +13,8 @@ function Header({tasks, addTask}) {
     <input type="text" 
          value={inputValue}
          placeholder="Add New Task..." 
-         onChange={changeInputValue}
+         onChange={(x) => onChange(x)}
+          
          />
     <button
       onClick={() => addTask(inputValue)}

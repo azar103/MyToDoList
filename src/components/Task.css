@@ -18,4 +18,9 @@ p {
     bottom: 15px;
     font-weight: 550;
     font-family: sans-serif;
+
+}
+
+.through {
+    text-decoration: line-through;
 }
